@@ -1,0 +1,39 @@
+    #h1 {
+        background-color: brown;
+        margin-top: 50px;
+    }
+    
+    #h3 {
+        color: black;
+        padding-top: 30px;
+    }
+    
+    #h4 {
+        color: white;
+        font-style: italic;
+        font-size: 15px;
+        padding-top: 30px;
+    }
+    
+    #h5 {
+        color: white;
+        font-style: italic;
+        font-size: 15px;
+    }
+    
+    #p1 {
+        font-size: 30px;
+        color: white;
+        margin-top: 80px;
+        padding-left: 30px;
+        background-color: rgb(211, 128, 113);
+    }
+    
+    #b1 {
+        background-color: rgb(131, 62, 62);
+        margin-bottom: 30px;
+    }
+    
+    #h6 {
+        background-color: tomato;
+    }

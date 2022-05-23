@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="FORM.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div>
+        <h2 id="head">form validation</h2>
+    </div>
+    <div id="f1" class="container">
+        <div id="rr1" class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <center>
+                    <form name="form2" method="get">
+                        <label>username</label><br>
+                        <input id="in2" type="text" name="username"><br>
+                        <p id="p1"></p>
+                        <label>password</label><br>
+                        <input id="in3" type="password" name="password"><br>
+                        <p id="p2"></p>
+                        <label>email</label><br>
+                        <input id="in4" type="email" name="email"><br>
+                        <p id="p3"></p>
+                        <label>phone</label><br>
+                        <input id="in5" type="tel" name="phone"><br><br>
+                        <p id="p4"></p>
+                        <input type="button" id="b1" value="submit" name="submit" onclick="form1()">
+
+                    </form>
+                </center>
+            </div>
+            <div class="col-sm-6">
+                <p id="p5"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function form1() {
+            var uname = document.form2.username.value;
+            var un = /^[a-zA-Z]+$/;
+            var pass = document.form2.password.value;
+            var p = /^[A-Za-z]\w{7,14}$/;
+            var em = document.form2.email.value;
+            var e = /\S+@\S+\.\S+/;
+            var ph = document.form2.phone.value;
+            var phn = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (uname.match(un)) {
+                document.getElementById("p1").innerHTML = "strong";
+            }
+            if (pass.match(p)) {
+                document.getElementById("p2").innerHTML = "strong password";
+            }
+            if (em.match(e)) {
+                document.getElementById("p3").innerHTML = "email in correct format";
+
+            }
+            if (ph.match(phn)) {
+                document.getElementById("p4").innerHTML = "number in correct format";
+            } else {
+                document.getElementById("p5").innerHTML = "not in correct format";
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

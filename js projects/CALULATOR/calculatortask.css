@@ -1,0 +1,27 @@
+table {
+    color: lightcoral;
+}
+
+#bt {
+    width: 80px;
+    background-color: lightcoral;
+    border-radius: 7px;
+}
+
+#in1 {
+    width: 340px;
+    border-radius: 7px;
+    background-color: pink;
+}
+
+#head1 {
+    text-align: center;
+    color: darkred;
+    font-style: italic;
+}
+
+#bt2 {
+    width: 165px;
+    background-color: rgb(136, 21, 21);
+    border-radius: 7px;
+}

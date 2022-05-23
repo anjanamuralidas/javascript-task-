@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="calculatortask.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <h1 id="head1">calculator</h1>
+    </div>
+    <div class="container">
+        <center>
+            <table border="2">
+                <tr>
+                    <td colspan="4"> <input type="text" id="in1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input id="bt2" type="button" value="AC" onclick="clr()"></td>
+                    <td><input id="bt" type="button" value="B" onclick="backspace()"></td>
+                    <td><input id="bt" type="button" value="+" onclick="cal('+')"> </td>
+                </tr>
+                <tr>
+                    <td><input id="bt" type="button" value="1" onclick="cal('1')"></td>
+                    <td><input id="bt" type="button" value="2" onclick="cal('2')"></td>
+                    <td><input id="bt" type="button" value="3" onclick="cal('3')"></td>
+                    <td><input id="bt" type="button" value="-" onclick="cal('-')"></td>
+                </tr>
+                <tr>
+                    <td><input id="bt" type="button" value="4" onclick="cal('4')"></td>
+                    <td><input id="bt" type="button" value="5" onclick="cal('5')"></td>
+                    <td><input id="bt" type="button" value="6" onclick="cal('6')"></td>
+                    <td><input id="bt" type="button" value="*" onclick="cal('*')"></td>
+                </tr>
+                <tr>
+                    <td><input id="bt" type="button" value="7" onclick="cal('7')"></td>
+                    <td><input id="bt" type="button" value="8" onclick="cal('8')"></td>
+                    <td><input id="bt" type="button" value="9" onclick="cal('9')"></td>
+                    <td><input id="bt" type="button" value="/" onclick="cal('/')"></td>
+                </tr>
+                <tr>
+                    <td><input id="bt" type="button" value="0" onclick="cal('0')"></td>
+                    <td><input id="bt" type="button" value="." onclick="cal('.')"></td>
+                    <td colspan="2"><input id="bt2" type="button" value="=" onclick="operation('=')"></td>
+
+                </tr>
+            </table>
+        </center>
+
+    </div>
+    <script>
+        function clr() {
+            document.getElementById("in1").value = ""
+        }
+
+        function cal(val) {
+            document.getElementById("in1").value += val
+        }
+
+        function operation() {
+            let a = document.getElementById("in1").value
+            let b = eval(a)
+            document.getElementById("in1").value = b
+        }
+
+        function backspace() {
+            var back = document.getElementById("in1").value
+            document.getElementById("in1").value = back.substr(0, back.length - 1)
+        }
+    </script>
+
+</body>
+
+</html>

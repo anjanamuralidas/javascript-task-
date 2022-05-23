@@ -1,0 +1,91 @@
+#head1 {
+    color: black;
+    margin-left: 300px;
+}
+
+#r1 {
+    background-color: violet;
+}
+
+#col1 {
+    background-color: rgb(99, 46, 148);
+}
+
+#head2 {
+    color: black;
+    font-size: 30px;
+    font-style: italic;
+    padding-left: 100px;
+    background-color: rgb(99, 46, 148);
+}
+
+#b1 {
+    background-color: orchid;
+    margin-top: 10px;
+}
+
+button {
+    background-color: rgb(43, 12, 75);
+}
+
+#b2 {
+    background-color: orchid;
+}
+
+#b3 {
+    background-color: orchid;
+}
+
+#b4 {
+    background-color: orchid;
+}
+
+#b5 {
+    background-color: orchid;
+}
+
+#b6 {
+    background-color: orchid;
+}
+
+#p2 {
+    background-color: rgb(99, 46, 148);
+    border: 2px solid orchid;
+    margin-top: 10px;
+    color: black;
+}
+
+#p3 {
+    background-color: rgb(99, 46, 148);
+    margin-top: 8px;
+    color: black;
+    border: 2px solid orchid;
+}
+
+#p4 {
+    background-color: rgb(99, 46, 148);
+    margin-top: 8px;
+    color: black;
+    border: 2px solid orchid;
+}
+
+#p5 {
+    background-color: rgb(99, 46, 148);
+    margin-top: 8px;
+    color: black;
+    border: 2px solid orchid;
+}
+
+#p6 {
+    background-color: rgb(99, 46, 148);
+    margin-top: 8px;
+    color: black;
+    border: 2px solid orchid;
+}
+
+#p7 {
+    background-color: rgb(99, 46, 148);
+    margin-top: 8px;
+    color: black;
+    border: 2px solid orchid;
+}

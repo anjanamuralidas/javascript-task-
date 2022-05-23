@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="rock.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 id="h">Rock Paper Scissor</h1>
+    <div id="cc" class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <img id="im1" src="/javascript/js projects/rock paper scissor/User_icon_2.svg.png">
+                <p id="p1"></p><br>
+                <h3 id="pp1"></h3>
+                <img id="im2" src="/javascript/js projects/rock paper scissor/2933245.png">
+                <p id="p2"></p><br>
+                <h3 id="pp2"></h3>
+                <div id="p3"></div><br>
+                <p id="p4">number of attempts:</p>
+                <div id="d1">
+                    <button id="b1"><img id="rock" src="/javascript/js projects/rock paper scissor/266-2667213_transparent-rock-paper-scissors-clipart-clipart-rock-paper.png"></button>
+                    <button id="b2"><img id="paper" src="/javascript/js projects/rock paper scissor/51-511436_rock-paper-scissors-dell-clipart.png"></button>
+                    <button id="b3"><img id="scissor" src="/javascript/js projects/rock paper scissor/rockpaperandscissors.png"></button>
+                </div>
+            </div>
+            <div class="col-sm-2 "></div>
+        </div>
+    </div>
+    <script>
+        var count = 1;
+        var userscore = 0;
+        var cmpscore = 0;
+        document.getElementById("b1").onclick = rock;
+        document.getElementById("b2").onclick = paper;
+        document.getElementById("b3").onclick = scissor;
+
+        function rock() {
+            if (count <= 5) {
+                g("rock");
+                count++;
+            } else {
+                if (userscore > cmpscore) {
+                    document.getElementById("pp1").innerHTML = "winner is user";
+                } else {
+                    document.getElementById("pp2 ").innerHTML = "winner is computer";
+                }
+            }
+        }
+
+        function paper() {
+            if (count <= 5) {
+                g("paper");
+                count++;
+            } else {
+                if (userscore > cmpscore) {
+                    document.getElementById("pp1").innerHTML = "winner is user";
+                } else {
+                    document.getElementById("pp2").innerHTML = "winner is computer";
+                }
+            }
+        }
+
+        function scissor() {
+            if (count <= 5) {
+                g("scissor");
+                count++;
+            } else {
+                if (userscore > cmpscore) {
+                    document.getElementById("pp1").innerHTML = "winner is user";
+                } else {
+                    document.getElementById("pp2").innerHTML = "winner is computer";
+                }
+            }
+        }
+
+        function g(userplay) {
+            cmpply = getcomputerplay();
+            if (userplay == "rock") {
+                if (cmpply == "rock") {
+                    document.getElementById("p3").innerHTML = "you tied";
+                } else if (userplay == "paper") {
+                    document.getElementById("p3").innerHTML = "you losed";
+                    cmpscore++;
+                } else if (cmpply == "scissor") {
+                    document.getElementById("p3 ").innerHTML = "you win";
+                    userscore++;
+                }
+            } else if (userplay == "paper") {
+                if (cmpply == "paper") {
+                    document.getElementById("p3").innerHTML = "you tied";
+                } else if (cmpply == "scissor") {
+                    document.getElementById("p3").innerHTML = "you losed";
+                    cmpscore++;
+                } else if (cmpply == "rock") {
+                    document.getElementById("p3").innerHTML = "you win";
+                    userscore++;
+                }
+            } else if (userplay == "scissor") {
+                if (cmpply == "scissor") {
+                    document.getElementById("p3").innerHTML = "you tied";
+                } else if (cmpply == "rock") {
+                    document.getElementById("p3").innerHTML = "you losed";
+                    cmpscore++;
+                } else if (cmpply == "paper") {
+                    document.getElementById("p3").innerHTML = "you win";
+                    userscore++;
+                }
+            }
+
+            document.getElementById("p1").innerHTML = userscore;
+            document.getElementById("p2").innerHTML = cmpscore;
+            document.getElementById("p4").innerHTML = count;
+        }
+
+        function getcomputerplay() {
+            var game = ["rock", "paper", "scissor"];
+            var g = game[Math.floor(Math.random() * game.length)];
+            return g;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

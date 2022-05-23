@@ -1,0 +1,84 @@
+            #cc {
+                background-color: black;
+            }
+            
+            #h {
+                text-align: center;
+            }
+            
+            #im1 {
+                height: 200px;
+                padding-left: 30px;
+                margin-top: 30px;
+                padding-top: 30px;
+            }
+            
+            #im2 {
+                height: 200px;
+                padding-left: 450px;
+                margin-top: -440px;
+                padding-top: 30px;
+            }
+            
+            #rock {
+                height: 200px;
+            }
+            
+            #paper {
+                height: 200px;
+            }
+            
+            #scissor {
+                height: 200px;
+            }
+            
+            #b1 {
+                margin-left: 50px;
+                margin-top: 30px;
+            }
+            
+            #d1 {
+                margin-top: 70px;
+            }
+            
+            #p1 {
+                border: 2px solid white;
+                height: 40px;
+                width: 100px;
+                margin-left: 60px;
+                margin-top: 20px;
+                color: white;
+                text-align: center;
+            }
+            
+            #p2 {
+                border: 2px solid white;
+                height: 40px;
+                width: 100px;
+                margin-left: 480px;
+                margin-top: -120px;
+                color: white;
+                text-align: center;
+            }
+            
+            #p3 {
+                padding-top: 20px;
+                text-align: center;
+                font-size: 25px;
+                color: white;
+            }
+            
+            #p4 {
+                text-align: center;
+                color: white;
+            }
+            
+            #pp2 {
+                text-align: right;
+                color: white;
+            }
+            
+            #pp1 {
+                text-align: left;
+                color: white;
+            }

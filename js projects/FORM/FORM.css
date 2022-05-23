@@ -1,0 +1,22 @@
+label {
+    color: brown;
+}
+
+#head {
+    text-align: center;
+    color: brown;
+    padding-top: 50px;
+}
+
+#b1 {
+    width: 150px;
+    background-color: brown;
+}
+
+#p1 {
+    color: black;
+}
+
+#rr1 {
+    background-color: lightcoral;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="formreg.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="hh"> registration form</h2>
+        <br>
+        <div id="r1" class="row">
+            <div class="col-sm-6">
+                <form name="form1" method="post">
+                    <label>name</label>
+                    <input type="text" name="name" size="15" />
+                    <p id="p1"></p>
+                    <br>
+                    <label> Gender : </label><br>
+                    <input id="rr" type="radio" name="male" /> Male <br>
+                    <input id="rr" type="radio" name="female" /> Female <br>
+                    <input id="rr" type="radio" name="other" /> Other
+                    <br>
+                    <p id="p3"></p>
+                    <label>Phone : </label>
+                    <input type="text" name="country code" value="+91" size="2" />
+                    <input type="text" name="phone" size="10" />
+                    <p id="p4"></p>
+                    <br> Address
+                    <br>
+                    <textarea cols="80" rows="5" value="address" name="add"></textarea>
+                    <p id="p5"></p>
+                    <br> <br> Email:
+                    <input type="email" id="email" name="email" />
+                    <p id="p6"></p> <br>
+                    <br> Password:
+                    <input type="Password" id="pass" name="pass"> <br>
+                    <p id="p7"></p>
+                    <br> Re-type password:
+                    <input type="Password" id="repass" name="repass"> <br>
+                    <p id="p8"></p>
+                    <input id="b1" type="button" value="Submit" name="submit" onclick="form2()" />
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <p id="p10"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function form2() {
+            var na = document.form1.name.value;
+            var n = /^[a-zA-Z]+$/;
+            var ph = document.form1.phone.value;
+            var phn = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            var pass = document.form1.pass.value;
+            var p = /^[A-Za-z]\w{7,14}$/;
+            var repass = document.form1.repass.value;
+            var rp = /^[A-Za-z]\w{7,14}$/;
+            var em = document.form1.email.value;
+            var e = /\S+@\S+\.\S+/;
+            var ad = document.form1.add.value;
+            var add = /^[a-zA-Z]+\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4}) [A-Za-z]$/;
+
+            if (na.match(n)) {
+                document.getElementById("p1").innerHTML = "strong";
+            }
+            if (document.getElementById('rr').checked == true) {
+                document.write(" gender is selected");
+            } else {
+                document.write(" gender  is not selected");
+            }
+            if (pass.match(p)) {
+                document.getElementById("p7").innerHTML = "strong password";
+            }
+            if (em.match(e)) {
+                document.getElementById("p6").innerHTML = "email in correct format";
+
+            }
+            if (ph.match(phn)) {
+                document.getElementById("p4").innerHTML = "number in correct format";
+            }
+
+            if (ad.match(add)) {
+                document.getElementById("p5").innerHTML = "address is in correct format";
+            } else {
+                document.getElementById("p10").innerHTML = "not in correct format";
+            }
+        }
+    </script>
+</body>
+
+</html>
